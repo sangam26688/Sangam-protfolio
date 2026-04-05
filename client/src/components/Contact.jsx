@@ -14,7 +14,7 @@ const Contact = () => {
 
     try {
       // ✅ ASLI API CALL (Backend URL)
-     const response = await fetch('https://sangam-protfolio-api.vercel.app/api/contact', {
+    const response = await fetch('https://sangam-protfolio-api.vercel.app/api/contact', { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData),
