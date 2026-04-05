@@ -1,0 +1,11 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173, // Default port
+    host: true  // Isse mobile par test karna easy hota hai
+  }
+})

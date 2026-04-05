@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Noto+Sans+JP:wght@900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #f0f0f0;
+  --accent: #ff0043;
+}
+
+.dark {
+  --bg-color: #050508;
+  --accent: #00f2ff;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-color);
+  @apply transition-colors duration-500 ease-in-out;
+}
+
+/* 3D Perspective for Logo */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.logo-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.logo-3d:hover {
+  transform: rotateY(15deg) rotateX(10deg);
+}
+
+/* Manga Shadow & Neon Glow */
+.manga-box {
+  box-shadow: 8px 8px 0px #000;
+}
+
+.dark .neon-box {
+  box-shadow: 0 0 25px rgba(0, 242, 255, 0.6), inset 0 0 10px rgba(0, 242, 255, 0.4);
+}
+
+/* Kanji Background */
+.kanji-watermark {
+  font-family: 'Noto Sans JP', sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
